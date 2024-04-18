@@ -1,7 +1,9 @@
 package com.example.labb_3_android
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import com.example.labb_3_android.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -19,11 +21,12 @@ class MainActivity : AppCompatActivity() {
         //header that says helldivers
         //logo
 
+        val buttonToInfo: Button = findViewById(R.id.toInfoBtn)
         //insert button to next page here
 
-        //toInfoBtn.setOnClickListener {
-        //val intent = Intent(this, InfoActivity::class.java)
-        //startActivity(intent)
-        //}
+        buttonToInfo.setOnClickListener {
+        val intent = Intent(this, InfoActivity::class.java)
+        startActivity(intent)
+        }
     }
 }
