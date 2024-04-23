@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">Labb_3_android</string>
+    <string name="age">age</string>
+    <string name="welcomeText">Welcome Helldiver!</string>
+    <string name="infoText">TODO info text</string>
+    <string name="propagandaText">TODO propaganda text</string>
+    <string name="enlistNow">Enlist Now!</string>
+    <string name="disclaimer">I am willing to die for Super Earth and am ready to perish in the pursuit of spreading managed democracy to the galaxy</string>
+    <string name="header">TODO header</string>
+    <string name="propaganda">TODO propaganda</string>
+    <string name="bodyText">TODO lorem ipsum lorem ipsum lorem ipsum</string>
+    <string name="outroText">TODO final words text yadayada</string>
+
+
 </resources>
