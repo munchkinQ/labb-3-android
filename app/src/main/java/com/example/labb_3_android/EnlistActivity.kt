@@ -2,8 +2,8 @@ package com.example.labb_3_android
 
 import android.content.Intent
 import android.os.Bundle
-import android.view.View
 import android.widget.Button
+import android.widget.CheckBox
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -24,14 +24,12 @@ class EnlistActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
-        //val db = Firebase.firestore
-
         db = FirebaseDatabase
             .getInstance("https://labb-3-a7ffb-default-rtdb.europe-west1.firebasedatabase.app/")
             .getReference("Helldivers")
 
         val enlistButton: Button = findViewById(R.id.enlistBtn)
-        val isWilling: View? = findViewById(R.id.isWillingToDie)
+        val isWilling: CheckBox = findViewById(R.id.isWillingToDie)
 
         enlistButton.setOnClickListener {
 
@@ -39,26 +37,34 @@ class EnlistActivity : AppCompatActivity() {
             val ageInput: EditText = findViewById(R.id.enlistmentAge)
             val emailInput: EditText = findViewById(R.id.enlistmentEmail)
 
-
             val name: String = nameInput.text.toString().trim()
             val age: String = ageInput.text.toString().trim()
             val email: String = emailInput.text.toString().trim()
+            val isWillingToDie: Boolean = isWilling.isChecked
 
-            if (name.isNotEmpty() &&
-                age.isNotEmpty() &&
-                email.isNotEmpty()) {
-                db.push().setValue(Helldiver(name, age, email))
-                    .addOnSuccessListener {
-                        Toast.makeText(this, "Added Helldiver", Toast.LENGTH_LONG).show()
-
-                        val intent = Intent(this, FinalActivity::class.java)
-                        startActivity(intent)
-                    }
-                    .addOnFailureListener {e ->
-                        Toast.makeText(this, "Womp womp: ${e.message}", Toast.LENGTH_LONG).show()
-                    }
+            if (name.length < 2) {
+                nameInput.error =
+                    "Super Earth laws stipulate that a name must contain at least 2 letters"
+            } else if (!android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+                emailInput.error = "Enter a valid supermail address, or face the consequences"
+            } else if (!age.matches(Regex("[0-9]+"))) {
+                ageInput.error = "Age *must* be in digits"
             } else {
-                Toast.makeText(this, "Please fill in all fields or pay the consequences", Toast.LENGTH_LONG).show()
+
+
+                    //push helldiver to db
+                    db.push().setValue(Helldiver(name, age, email, isWillingToDie))
+                        .addOnSuccessListener {
+                            Toast.makeText(this, "Added Helldiver", Toast.LENGTH_LONG).show()
+
+                            val intent = Intent(this, FinalActivity::class.java)
+                            startActivity(intent)
+                        }
+                        .addOnFailureListener { e ->
+                            Toast.makeText(this, "Womp womp: ${e.message}", Toast.LENGTH_LONG)
+                                .show()
+                        }
+                }
             }
         }
     }
@@ -67,9 +73,10 @@ class EnlistActivity : AppCompatActivity() {
 
     //insert enlist form here
     //will take in name, age & contact info
-    //potentially: also a boolean (maybe a check if i have time?) "are you a patriot"
+    //potentially: also a boolean (maybe a check if i have time?)
+    // "are you a patriot/are you willing to die"
     //send to firebase
-    //if time: snackbox with a oops function
-    //if even more time: clicking on the "i changed my mind" will take user to a new page where they are informed they are treasonous and will be persecuted for their crimes against the democracy "no take-backsies"
-
-}
+    //if time: snackbox with an oops function
+    //if even more time: clicking on the "i changed my mind"
+    // will take user to a new page where they are informed they are treasonous
+    // and will be persecuted for their crimes against the democracy "no take-backsies"

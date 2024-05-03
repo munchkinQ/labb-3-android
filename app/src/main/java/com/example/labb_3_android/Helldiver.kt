@@ -4,7 +4,7 @@ data class Helldiver(
     val name: String? = null,
     val age: String? = null,
     val email: String? = null,
-    //val isWillingToDie: Boolean? = null
+    val isWillingToDie: Boolean? = null
 ) {
 
 }
