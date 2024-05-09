@@ -2,11 +2,12 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.Labb_3_android" parent="Theme.Material3.DayNight.NoActionBar">
 
-        <item name="colorPrimary">#000000</item>
-        <item name="colorAccent">#FFEB3B</item>
-        <item name="color">#FF8400</item>
+        <item name="android:colorBackground">#000000</item>
+        <item name="colorPrimary">#FFEB3B</item>
+        <item name="colorAccent">#FF8400</item>
 
         <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textColorHint">#FFFFFF</item>
 
 
 
