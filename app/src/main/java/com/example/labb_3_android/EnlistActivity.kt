@@ -17,13 +17,15 @@ class EnlistActivity : AppCompatActivity() {
 
     private lateinit var binding : ActivityEnlistBinding
     private lateinit var db : DatabaseReference
+    private var helldiverId: String? = null
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityEnlistBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
-
+        
         db = FirebaseDatabase
             .getInstance("https://labb-3-a7ffb-default-rtdb.europe-west1.firebasedatabase.app/")
             .getReference("Helldivers")
@@ -53,11 +55,15 @@ class EnlistActivity : AppCompatActivity() {
 
 
                     //push helldiver to db
-                    db.push().setValue(Helldiver(name, age, email, isWillingToDie))
+                    val pushHelldiver = db.push()
+                    pushHelldiver.setValue(Helldiver(name, age, email, isWillingToDie))
                         .addOnSuccessListener {
                             Toast.makeText(this, "Added Helldiver", Toast.LENGTH_LONG).show()
 
-                            val intent = Intent(this, FinalActivity::class.java)
+                            helldiverId = pushHelldiver.key
+
+                            val intent = Intent(this, TreasonActivity::class.java)
+                            intent.putExtra("id", helldiverId)
                             startActivity(intent)
                         }
                         .addOnFailureListener { e ->
