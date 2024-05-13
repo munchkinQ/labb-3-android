@@ -7,32 +7,40 @@
     tools:context=".EnlistActivity">
 
     <EditText
+        android:id="@+id/enlistmentName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autofillHints=""
+        android:background="@drawable/border"
+        android:ems="10"
+        android:hint="@string/name"
+        android:inputType="text"
+        android:padding="10dp"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/enlistmentAge"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.903" />
+
+    <EditText
         android:id="@+id/enlistmentAge"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:autofillHints=""
+        android:background="@drawable/border"
         android:ems="10"
         android:hint="@string/age"
-        android:textColor="#FFFFFF"
         android:inputType="number"
+        android:padding="10dp"
+        android:textColor="#FFFFFF"
         app:layout_constraintBottom_toTopOf="@+id/enlistmentEmail"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.507"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
-
-    <CheckBox
-        android:id="@+id/isWillingToDie"
-        android:layout_width="211dp"
-        android:layout_height="58dp"
-        android:text="@string/disclaimer"
-        android:textSize="8sp"
-        android:textColor="#FFFFFF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/enlistmentEmail"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.927" />
 
     <TextView
         android:id="@+id/enlistText"
@@ -42,53 +50,57 @@
         android:layout_marginTop="24dp"
         android:layout_marginEnd="8dp"
         android:text="@string/enlistNow"
+        android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/enlistmentName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.514" />
-
-    <EditText
-        android:id="@+id/enlistmentEmail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="supermail"
-        android:textColor="#FFFFFF"
-        android:inputType="textEmailAddress"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.448" />
+        app:layout_constraintVertical_bias="0.691" />
 
     <Button
         android:id="@+id/enlistBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="#000000"
+        android:background="@drawable/border"
         android:text="@string/enlistNow"
+        android:textColor="@color/yellow"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/isWillingToDie"
-        app:layout_constraintVertical_bias="0.3" />
+        app:layout_constraintVertical_bias="0.153" />
+
+    <CheckBox
+        android:id="@+id/isWillingToDie"
+        android:layout_width="211dp"
+        android:layout_height="58dp"
+        android:text="@string/disclaimer"
+        android:textColor="#FFFFFF"
+        android:textSize="8sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/enlistmentEmail"
+        app:layout_constraintVertical_bias="0.058" />
 
     <EditText
-        android:id="@+id/enlistmentName"
+        android:id="@+id/enlistmentEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:autofillHints=""
+        android:background="@drawable/border"
         android:ems="10"
-        android:hint="name"
+        android:hint="supermail"
+        android:inputType="textEmailAddress"
+        android:padding="10dp"
         android:textColor="#FFFFFF"
-        android:inputType="text"
-        app:layout_constraintBottom_toTopOf="@+id/enlistmentAge"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.507"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.489" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,15 +1,23 @@
 <resources>
     <string name="app_name">Labb_3_android</string>
     <string name="age">age</string>
+    <string name="supermail">supermail</string>
+    <string name="name">name</string>
     <string name="welcomeText">Welcome Helldiver!</string>
-    <string name="infoText">TODO info text</string>
+    <string name="infoText">Join in the fight for Democracy today! By simply entering your super government credentials you will officially be entered into the Helldiver intro course and sent an official draft letter within 1 hour. After a quick Helldiver Physical Exam you will earn your cape and be ready to spread Managed Democracy to faraway planets! Be on the right side of history; be a Helldiver.</string>
     <string name="propagandaText">TODO propaganda text</string>
     <string name="enlistNow">Enlist Now!</string>
     <string name="disclaimer">I am willing to die for Super Earth and am ready to perish in the pursuit of spreading managed democracy to the galaxy</string>
     <string name="header">TODO header</string>
-    <string name="propaganda">TODO propaganda</string>
+    <string name="propaganda">Current orders for Helldivers, join now and support fellow Helldivers in this mission!</string>
     <string name="bodyText">TODO lorem ipsum lorem ipsum lorem ipsum</string>
     <string name="outroText">TODO final words text yadayada</string>
+    <string name="thanks">Democracy thanks you, </string>
+    <string name="join">Join the</string>
+    <string name="today">today!!</string>
+    <string name="more">More</string>
+    <string name="toEnlist">Enlist</string>
+    <string name="toPropaganda">News</string>
 
 
 </resources>

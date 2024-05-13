@@ -1,9 +1,9 @@
 package com.example.labb_3_android
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import androidx.appcompat.app.AppCompatActivity
 import com.example.labb_3_android.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -12,21 +12,25 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        //main page
-        //header that says helldivers
-        //logo
-
         val buttonToInfo: Button = findViewById(R.id.toInfoBtn)
-        //insert button to next page here
+        val buttonToPropaganda: Button = findViewById(R.id.toPropaganda)
+        val buttonToEnlist: Button = findViewById(R.id.toEnlist)
 
         buttonToInfo.setOnClickListener {
         val intent = Intent(this, InfoActivity::class.java)
         startActivity(intent)
+        }
+        buttonToPropaganda.setOnClickListener {
+            val intent = Intent(this, PropagandaActivity::class.java)
+            startActivity(intent)
+        }
+
+        buttonToEnlist.setOnClickListener {
+            val intent3 = Intent(this, EnlistActivity::class.java)
+            startActivity(intent3)
         }
     }
 }

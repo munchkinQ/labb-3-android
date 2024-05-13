@@ -10,8 +10,6 @@
         <item name="android:textColorHint">#FFFFFF</item>
 
 
-
-
     </style>
 
     <style name="Theme.Labb_3_android" parent="Base.Theme.Labb_3_android" />

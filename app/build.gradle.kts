@@ -55,6 +55,11 @@ dependencies {
     //implementation ("com.github.bumptech.glide:glide:4.15.0")
     //annotationProcessor ("com.github.bumptech.glide:compiler:4.15.0")
 
+    //theme thingy
+    implementation ("androidx.appcompat:appcompat:1.6.1")
+    implementation ("com.google.android.material:material:1.12.0")
+    //implementation ("com.android.support:design:28.0.0")
+
 
     implementation("androidx.core:core-ktx:1.12.0")
     implementation("androidx.appcompat:appcompat:1.6.1")

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="BorderedButton" parent="Widget.Material3.Button">
+        <item name="android:background">@drawable/border</item>
+    </style>
+
+    <style name="BorderedInput" parent="Widget.Material3.EditText">
+        <item name="android:background">@drawable/border</item>
+    </style>
+
+</resources>
+
+
