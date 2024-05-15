@@ -2,9 +2,9 @@ package com.example.labb_3_android
 
 import android.annotation.SuppressLint
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import androidx.appcompat.app.AppCompatActivity
 
 class FinalActivity : AppCompatActivity() {
     @SuppressLint("MissingInflatedId")
@@ -26,4 +26,6 @@ class FinalActivity : AppCompatActivity() {
     //val intent = Intent(this, MainActivity::class.java)
     //startActivity(intent)
     //}
+
+    //this activity ended up not being used :/
 }

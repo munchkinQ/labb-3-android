@@ -6,48 +6,71 @@
     android:layout_height="match_parent"
     tools:context=".TreasonActivity">
 
-    <TextView
-        android:id="@+id/treasonText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="60dp"
-        android:text="TextView"
+    <ImageView
+        android:id="@+id/hellridersLogoTreason"
+        android:layout_width="368dp"
+        android:layout_height="190dp"
+        android:background="@drawable/border"
+        android:paddingTop="50dp"
+        android:paddingBottom="20dp"
         app:layout_constraintBottom_toTopOf="@+id/backHomeBtn"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.697"
+        app:srcCompat="@drawable/helldiverslogo" />
+
+    <TextView
+        android:id="@+id/outroText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:text="@string/outroText"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/backHomeBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/treasonHeader"
+        app:layout_constraintVertical_bias="0.147" />
 
     <TextView
         android:id="@+id/treasonHeader"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TextView"
+        android:textColor="@color/yellow"
+        android:textSize="20dp"
         app:layout_constraintBottom_toTopOf="@+id/hellridersLogoTreason"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.488" />
-
-    <ImageView
-        android:id="@+id/hellridersLogoTreason"
-        android:layout_width="304dp"
-        android:layout_height="153dp"
-        android:layout_marginBottom="132dp"
-        app:layout_constraintBottom_toTopOf="@+id/treasonText"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/helldiverslogo" />
+        app:layout_constraintVertical_bias="0.444" />
 
     <Button
         android:id="@+id/backHomeBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="100dp"
-        android:text="Button"
-        android:textColor="@color/yellow"
         android:background="@drawable/border"
+        android:text="@string/backHome"
+        android:textColor="@color/yellow"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.613" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="223dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/backHomeBtn"
+        app:layout_constraintVertical_bias="0.983"
+        app:srcCompat="@drawable/helldivers_2_png" />
 </androidx.constraintlayout.widget.ConstraintLayout>

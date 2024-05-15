@@ -23,7 +23,7 @@ class TreasonActivity : AppCompatActivity() {
 
         val backHomeButton: Button = findViewById(R.id.backHomeBtn)
         val header: TextView = findViewById(R.id.treasonHeader)
-        val text: TextView = findViewById(R.id.treasonText)
+        val text: TextView = findViewById(R.id.outroText)
         val helldiverId = intent.getStringExtra("id")
 
         db = FirebaseDatabase.getInstance("https://labb-3-a7ffb-default-rtdb.europe-west1.firebasedatabase.app/")
