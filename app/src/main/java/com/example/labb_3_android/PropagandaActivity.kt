@@ -45,10 +45,16 @@ class PropagandaActivity : AppCompatActivity() {
 
         //button
         val enlistButton: Button = findViewById(R.id.toEnlistBtn)
+        val homeButton: Button = findViewById(R.id.backHome)
 
         //listener
         enlistButton.setOnClickListener {
             val intent = Intent(this, EnlistActivity::class.java)
+            startActivity(intent)
+        }
+
+        homeButton.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
 

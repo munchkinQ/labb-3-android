@@ -4,7 +4,7 @@
     <string name="supermail">supermail</string>
     <string name="name">name</string>
     <string name="welcomeText">Welcome Helldiver!</string>
-    <string name="infoText">Join in the fight for Democracy today! By simply entering your super government credentials you will officially be entered into the Helldiver intro course and sent an official draft letter within 1 hour. After a quick Helldiver Physical Exam you will earn your cape and be ready to spread Managed Democracy to faraway planets! Be on the right side of history; be a Helldiver.</string>
+    <string name="infoText">Information about Automaton enemy units:</string>
     <string name="propagandaText">TODO propaganda text</string>
     <string name="enlistNow">Enlist Now!</string>
     <string name="disclaimer">I am willing to die for Super Earth and am ready to perish in the pursuit of spreading managed democracy to the galaxy</string>
@@ -18,6 +18,16 @@
     <string name="more">More</string>
     <string name="toEnlist">Enlist</string>
     <string name="toPropaganda">News</string>
+    <string name="backHome">Home</string>
+    <string name="propagandaHeader">Our Helldivers\' Current Mission:</string>
+    <string name="propagandaTv">Enlist now to become a Helldiver and join in this honorable mission!</string>
+    <string name="hunterTv">Hunters are small terminid units that often travel in large packs with another, or in groups with other units. They are prone to jump from side to side before quickly striking, beware the claws!</string>
+    <string name="spewerTv">Bile Spewers are large, venomous terminid units that usually travel alone. They spew bile from their large bellies that is quite toxic.</string>
+    <string name="biletitanTv">Bile Titans are enormous rare terminid units that few helldivers ever get to see! Like the Bile Spewers they spew out toxic bile at perceived threats.</string>
+    <string name="botTv">The Commissar automatons come equipped with either swords or blasters, they\'re the bread and butter of the automaton forces.</string>
+    <string name="dsTv">Dropships come to the aid of automaton forces if requested via a flare, they will drop additional automaton units, more units to bring democracy to!</string>
+    <string name="striderTv">Strider units have a regular footsoldier at the helm, simply eliminate the strider and only the regular unit will remain.</string>
+    <string name="infoHeader">Information about Terminid enemy units:</string>
 
 
 </resources>

@@ -8,8 +8,8 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
-import com.example.labb_3_android.vm.EnlistViewModel
 import com.example.labb_3_android.databinding.ActivityEnlistBinding
+import com.example.labb_3_android.viewModel.EnlistViewModel
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 

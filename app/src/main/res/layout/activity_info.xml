@@ -8,33 +8,187 @@
 
     <TextView
         android:id="@+id/infoHeader"
-        android:layout_width="65dp"
-        android:layout_height="15dp"
-        android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/infoText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/infoHeader"
+        android:textAlignment="center"
+        android:textColor="@color/yellow"
+
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@id/relativeLayout"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.489"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.266" />
 
     <Button
         android:id="@+id/toPropagandaBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="76dp"
-        android:text="@string/more"
-        android:textColor="@color/yellow"
+        android:layout_marginEnd="75dp"
         android:background="@drawable/border"
+        android:text="@string/toPropaganda"
+        android:textColor="@color/yellow"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout"
+        app:layout_constraintVertical_bias="0.503" />
 
-    <TextView
-        android:id="@+id/infoText"
+    <Button
+        android:id="@+id/homeBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/toPropagandaBtn"
+        android:background="@drawable/border"
+        android:text="@string/backHome"
+        android:textColor="@color/yellow"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/toPropagandaBtn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout"
+        app:layout_constraintVertical_bias="0.503" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="555dp"
+        app:layout_constraintBottom_toTopOf="@id/homeBtn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:layout_goneMarginTop="30dp"
+        tools:context=".InfoActivity"
+        tools:ignore="NotSibling">
+
+        <ScrollView
+            android:id="@+id/scrollView1"
+            android:layout_width="match_parent"
+            android:layout_height="250dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/hunterIv"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:contentDescription="@string/hunterTv"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/hunter_ii" />
+
+                <TextView
+                    android:id="@+id/hunterTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/hunterTv" />
+
+                <ImageView
+                    android:id="@+id/spewerIv"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:contentDescription="@string/spewerTv"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/_171070270_preview_bile_spewer_ii" />
+
+                <TextView
+                    android:id="@+id/spewerTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/spewerTv" />
+
+                <ImageView
+                    android:id="@+id/biletitanIv"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:contentDescription="@string/biletitanTv"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/bile_titan_png" />
+
+                <TextView
+                    android:id="@+id/biletitanTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/biletitanTv" />
+
+            </LinearLayout>
+        </ScrollView>
+
+        <TextView
+            android:id="@+id/infoText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/scrollView1"
+            android:layout_alignBottom="@+id/scrollView2"
+            android:layout_margin="12dp"
+            android:text="@string/infoText"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            android:textColor="@color/yellow"/>
+
+        <ScrollView
+            android:id="@+id/scrollView2"
+            android:layout_width="match_parent"
+            android:layout_height="226dp"
+            android:layout_alignParentBottom="true"
+            app:layout_constraintBottom_toTopOf="@id/homeBtn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/infoText"
+            tools:ignore="NotSibling,UnknownId">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/botIv"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:contentDescription="@string/botTv"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/_171070270_preview_commissar_ii2" />
+
+                <TextView
+                    android:id="@+id/botTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/botTv" />
+
+                <ImageView
+                    android:id="@+id/striderIv"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:contentDescription="@string/striderTv"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/scout_strider_ii_2" />
+
+                <TextView
+                    android:id="@+id/dsTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/dsTv" />
+
+                <ImageView
+                    android:id="@+id/dsIv"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:contentDescription="@string/dsTv"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/dropship_ii" />
+
+                <TextView
+                    android:id="@+id/striderTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/striderTv" />
+
+
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
