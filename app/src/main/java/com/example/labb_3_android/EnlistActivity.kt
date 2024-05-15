@@ -7,6 +7,7 @@ import android.widget.CheckBox
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.example.labb_3_android.databinding.ActivityEnlistBinding
 import com.example.labb_3_android.viewModel.EnlistViewModel
@@ -17,7 +18,6 @@ class EnlistActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityEnlistBinding
     private lateinit var db: DatabaseReference
-    private var helldiverId: String? = null
     private lateinit var viewModel: EnlistViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -26,9 +26,11 @@ class EnlistActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
-        viewModel = ViewModelProvider(this)[EnlistViewModel::class.java]
-        viewModel.helldiverId?.let { helldiverId ->
-            this.helldiverId = helldiverId
+        viewModel = ViewModelProvider(this).get(EnlistViewModel::class.java)
+        viewModel.helldiverId.observe(this, Observer { helldiverId ->
+            helldiverId?.let {
+            }
+        })
 
             db = FirebaseDatabase
                 .getInstance("https://labb-3-a7ffb-default-rtdb.europe-west1.firebasedatabase.app/")
@@ -57,16 +59,16 @@ class EnlistActivity : AppCompatActivity() {
                     ageInput.error = "Age *must* be in digits"
                 } else {
 
-
                     val pushHelldiver = db.push()
                     pushHelldiver.setValue(Helldiver(name, age, email, isWillingToDie))
                         .addOnSuccessListener {
+                            val id = pushHelldiver.key
+                            viewModel.setHelldiverId(id)
+
                             Toast.makeText(this, "Added Helldiver", Toast.LENGTH_LONG).show()
 
-                            viewModel.helldiverId = pushHelldiver.key
-
                             val intent = Intent(this, TreasonActivity::class.java)
-                            intent.putExtra("id", helldiverId)
+                            intent.putExtra("id", id)
                             startActivity(intent)
                         }
                         .addOnFailureListener { e ->
@@ -77,4 +79,3 @@ class EnlistActivity : AppCompatActivity() {
             }
         }
     }
-}
